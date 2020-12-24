@@ -15,7 +15,6 @@ const PastLaunches = () => {
     }).then(res => {
       return res.json();
     }).then(res => {
-      console.log(res);
       setLaunches(res.docs);
     })
   }, []);
@@ -23,7 +22,7 @@ const PastLaunches = () => {
   return (
     <>
       <div className="container">
-        <h1>All Past</h1>
+        <h1>Past</h1>
         {launches.map((e, i) => {
           return (
             <SingleLaunch key={i} launch={e} />

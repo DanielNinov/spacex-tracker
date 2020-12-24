@@ -24,7 +24,8 @@ export const PAST_BODY = JSON.stringify({
             "success": 1,
             "details": 1,
             "rocket": 1,
-            "date_utc": 1
+            "date_utc": 1,
+            "date_precision": 1
         },
         "populate": [
             {

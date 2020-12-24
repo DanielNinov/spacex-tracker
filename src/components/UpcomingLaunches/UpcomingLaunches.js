@@ -18,7 +18,7 @@ const UpcomingLaunches = () => {
   return (
     <>
       <div className="container">
-        <h1>All Upcoming</h1>
+        <h1>Upcoming</h1>
         {launches.map((e, i) => {
           return (
             <SingleLaunch key={i} launch={e} />
