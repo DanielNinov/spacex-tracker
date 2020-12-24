@@ -12,8 +12,26 @@ code {
     monospace;
 }
 
-.launch-patch-small {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+@media screen and (min-width: 420px) {
+  .launch-patch-small {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .launch-patch-small {
+    margin-top: 15px;
+  }
+}
+
+.social-media-icon {
+  text-decoration: none;
+  color: inherit;
+  font-size: 24px;
+}
+
+.social-media-icon:hover {
+  color: white;
 }
