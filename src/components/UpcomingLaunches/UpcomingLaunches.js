@@ -1,18 +1,22 @@
 import React, { useEffect, useState } from 'react';
-import { SPACEX_API } from '../../common/constants';
+import { SPACEX_API, UPCOMING_BODY } from '../../common/constants';
 import SingleLaunch from '../SingleLaunch/SingleLaunch';
 
 const UpcomingLaunches = () => {
   const [launches, setLaunches] = useState([]);
 
   useEffect(() => {
-    fetch(`${SPACEX_API}/launches/upcoming`, {
+    fetch(`${SPACEX_API}/launches/query`, {
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
+      body: UPCOMING_BODY,
     }).then(res => {
       return res.json();
-    }).then(result => setLaunches(result));
+    }).then(res => {
+      setLaunches(res.docs);
+    })
   }, []);
 
   return (
