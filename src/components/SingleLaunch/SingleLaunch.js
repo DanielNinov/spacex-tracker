@@ -22,15 +22,16 @@ const SingleLaunch = ({ launch }) => {
               <Card.Subtitle className="mb-1">{DateFormatter(launch.date_utc, launch.date_precision, launch.tbd, launch.net)}</Card.Subtitle>
 
               {launch.details ?
-              <Card.Text>{launch.details}</Card.Text> :
-              <Card.Text className="card-text">No description available</Card.Text>}
+                <Card.Text>{launch.details}</Card.Text> :
+                <Card.Text className="card-text">No description available</Card.Text>}
 
-              <Card.Link className="social-media-icon"
+              {launch.links.reddit.campaign ? <Card.Link className="social-media-icon"
                 href={`${launch.links.reddit.campaign}`}
-                aria-label={`${launch.name} Reddit Link`}><i className="fab fa-reddit fa-lg" /></Card.Link>
-              <Card.Link className="social-media-icon"
+                aria-label={`${launch.name} Reddit Link`}><i className="fab fa-reddit fa-lg" /></Card.Link> : null}
+
+              {launch.links.youtube_id ? <Card.Link className="social-media-icon"
                 href={`https://youtu.be/${launch.links.youtube_id}`}
-                aria-label={`${launch.name} Youtube Link`}><i className="fab fa-youtube fa-lg" /></Card.Link>
+                aria-label={`${launch.name} Youtube Link`}><i className="fab fa-youtube fa-lg" /></Card.Link> : null}
             </Card.Body>
           </Col>
         </Row>
