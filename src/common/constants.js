@@ -77,3 +77,5 @@ export const UPCOMING_BODY = JSON.stringify({
         ]
     }
 });
+export const LINKEDIN_URL = "https://www.linkedin.com/in/danielninov/";
+export const GITHUB_URL = "https://github.com/DanielNinov/spacex-tracker/";

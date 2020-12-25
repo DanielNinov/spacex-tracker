@@ -18,11 +18,20 @@ code {
     top: 50%;
     transform: translateY(-50%);
   }
+
+  .home-title {
+    margin-top: 100px;
+  }
 }
 
 @media screen and (max-width: 420px) {
   .launch-patch-small {
     margin-top: 15px;
+  }
+
+  .home-title {
+    margin-top: 150px;
+    font-size: 46px;
   }
 }
 
@@ -34,4 +43,12 @@ code {
 
 .social-media-icon:hover {
   color: white;
+}
+
+.loading-img {
+  width: 200px;
+  height: 200px;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
 }
